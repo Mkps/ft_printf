@@ -6,7 +6,7 @@
 #    By: aloubier <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/07 15:53:37 by aloubier          #+#    #+#              #
-#    Updated: 2022/12/07 15:53:45 by aloubier         ###   ########.fr        #
+#    Updated: 2023/03/25 11:54:16 by aloubier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,4 +43,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all bonus clean fclean re
+.PHONY: all clean fclean re
