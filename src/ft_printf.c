@@ -6,7 +6,7 @@
 /*   By: aloubier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 15:55:42 by aloubier          #+#    #+#             */
-/*   Updated: 2022/12/07 18:14:16 by aloubier         ###   ########.fr       */
+/*   Updated: 2023/03/25 13:56:21 by aloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_select_type(va_list args, const char c)
 	if (c == '%')
 		return (ft_char('%'));
 	else
-		return(0);
+		return (0);
 }
 
 int	ft_printf(const char *src, ...)

@@ -6,19 +6,19 @@
 /*   By: aloubier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 11:55:50 by aloubier          #+#    #+#             */
-/*   Updated: 2023/03/25 11:55:52 by aloubier         ###   ########.fr       */
+/*   Updated: 2023/03/25 13:54:47 by aloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
-int ft_char(char c)
+int	ft_char(char c)
 {
 	write(1, &c, 1);
 	return (1);
 }
 
-int ft_str(char *c)
+int	ft_str(char *c)
 {
 	size_t	i;
 
@@ -32,4 +32,3 @@ int ft_str(char *c)
 	}
 	return (i);
 }
-	

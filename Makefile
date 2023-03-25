@@ -6,7 +6,7 @@
 #    By: aloubier <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/07 15:53:37 by aloubier          #+#    #+#              #
-#    Updated: 2023/03/25 11:54:16 by aloubier         ###   ########.fr        #
+#    Updated: 2023/03/25 13:52:33 by aloubier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,10 +27,7 @@ CFLAGS = -Wall -Wextra -Werror -I./includes
 all: $(NAME)
 
 $(NAME): $(OBJ) 
-	ar rc $(NAME) $(OBJ)
-
-bonus: $(OBJ) $(BONUS_OBJ)
-	ar rc $(NAME) $(OBJ) $(BONUS_OBJ)
+	ar rcs $(NAME) $(OBJ)
 
 %.o: %.c
 	$(CC) -c $(CFLAGS) $< -o $@

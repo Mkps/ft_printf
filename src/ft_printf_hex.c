@@ -6,13 +6,13 @@
 /*   By: aloubier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 11:55:03 by aloubier          #+#    #+#             */
-/*   Updated: 2023/03/25 11:55:06 by aloubier         ###   ########.fr       */
+/*   Updated: 2023/03/25 13:55:41 by aloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
-static int	ft_hexlen(unsigned int	nb)
+static int	ft_hexlen(unsigned int nb)
 {
 	int	len;
 
