@@ -1,7 +1,9 @@
+#include "../includes/ft_printf.h"
+
 static void	ft_putunsigned(unsigned int number, int *length)
 {
 	if (number > 9)
-		ft_number(number / 10, length);
+		ft_putunsigned(number / 10, length);
 	length += ft_char(number % 10 + '0');
 }
 
@@ -25,12 +27,12 @@ static void	ft_putnbr(int number, int *length)
 	if (number < 0)
 	{
 		length += ft_char('-');
-		ft_number(number * -1, length);
+		ft_putnbr(number * -1, length);
 	}
 	else
 	{
 		if (number > 9)
-			ft_number(number / 10, length);
+			ft_putnbr(number / 10, length);
 		length += ft_char(number % 10 + '0');
 	}
 }

@@ -1,3 +1,4 @@
+#include "../includes/ft_printf.h"
 size_t	ft_ptr_len(uintptr_t nb)
 {
 	size_t	len;
@@ -21,9 +22,9 @@ void	ft_put_ptr(uintptr_t nb)
 	else
 	{
 		if (nb <= 9)
-			ft_putchar_fd((nb + '0'), 1);
+			ft_char(nb + '0');
 		else
-			ft_putchar_fd((nb - 10 + 'a'), 1);
+			ft_char(nb - 10 + 'a');
 	}
 }
 

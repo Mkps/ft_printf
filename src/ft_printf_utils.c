@@ -1,3 +1,5 @@
+#include "../includes/ft_printf.h"
+
 int ft_char(char c)
 {
 	write(1, &c, 1);
@@ -16,5 +18,6 @@ int ft_str(char *c)
 		ft_char(c[i]);
 		i++;
 	}
+	return (i);
 }
 	

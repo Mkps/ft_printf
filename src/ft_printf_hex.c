@@ -1,7 +1,6 @@
-#include "ft_printf.h"
-#include "libft.h"
+#include "../includes/ft_printf.h"
 
-int	ft_hexlen(unsigned int	nb)
+static int	ft_hexlen(unsigned int	nb)
 {
 	int	len;
 
@@ -14,7 +13,7 @@ int	ft_hexlen(unsigned int	nb)
 	return (len);
 }
 
-void	ft_puthex(unsigned int nb, const char format)
+static void	ft_puthex(unsigned int nb, const char format)
 {
 	if (nb >= 16)
 	{
@@ -24,7 +23,7 @@ void	ft_puthex(unsigned int nb, const char format)
 	else
 	{
 		if (nb <= 9)
-			ft_putchar((nb + '0'), 1);
+			ft_char(nb + '0');
 		else
 		{
 			if (format == 'x')

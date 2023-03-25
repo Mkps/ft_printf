@@ -15,21 +15,23 @@
 int	ft_select_type(va_list args, const char c)
 {
 	if (c == 'c')
-		return (ft_char(va_args(args, int));
+		return (ft_char(va_arg(args, int)));
 	if (c == 's')
-		return (ft_str(va_args(args, char *));
+		return (ft_str(va_arg(args, char *)));
 	if (c == 'p')
-		return (ft_ptr(va_args(args, unsigned long long));
+		return (ft_ptr(va_arg(args, unsigned long long)));
 	if (c == 'd')
-		return (ft_dec(va_arg(args, int));
+		return (ft_number(va_arg(args, int)));
 	if (c == 'i')
-		return (ft_nbr(va_args(args, int));
+		return (ft_number(va_arg(args, int)));
 	if (c == 'u')
-		return (ft_unsigned(va_args(args, unsigned int));
+		return (ft_unsigned(va_arg(args, unsigned int)));
 	if (c == 'x' || c == 'X')
-		return (ft_hex(va_args(args, unsigned int), c);
+		return (ft_hex(va_arg(args, unsigned int), c));
 	if (c == '%')
 		return (ft_char('%'));
+	else
+		return(0);
 }
 
 int	ft_printf(const char *src, ...)
@@ -49,7 +51,7 @@ int	ft_printf(const char *src, ...)
 			i++;
 		}
 		else
-			written_char += ft_printchar(src[i]);
+			written_char += ft_char(src[i]);
 		i++;
 	}
 	va_end(args);
