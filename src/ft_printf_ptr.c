@@ -46,11 +46,11 @@ int	ft_ptr(unsigned long long ptr)
 	size_t	len;
 
 	len = 0;
-	len += write(1, "0x", 2);
 	if (ptr == 0)
-		len += write(1, "0", 1);
+		len += ft_str("(nil)");
 	else
 	{
+		len += write(1, "0x", 2);
 		ft_put_ptr(ptr);
 		len += ft_ptr_len(ptr);
 	}
