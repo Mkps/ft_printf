@@ -24,5 +24,6 @@ int	ft_str(char *input);
 int	ft_ptr(unsigned long long input);
 int	ft_number(int input);
 int	ft_unsigned(unsigned int input);
+int	ft_printf(const char *src, ...);
 
 #endif
